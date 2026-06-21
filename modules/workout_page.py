@@ -82,7 +82,7 @@ def show_workout():
         max_value=500,
         value=10,
         step=1
-    )
+        )
 
     col1, col2 = st.columns(2)
 
