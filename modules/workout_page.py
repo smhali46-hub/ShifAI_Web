@@ -6,7 +6,7 @@ from datetime import datetime
 from user_manager import get_progress_file
 from user_manager import get_current_user
 from database import save_workout_db
-from modules.ai_workout_detector import start_ai_detection
+#from modules.ai_workout_detector import start_ai_detection
 
 
 def save_workout(exercise, reps):
@@ -96,7 +96,7 @@ def show_workout():
 
     with col2:
         if st.button("🎯 Start AI Detection"):
-            start_ai_detection(exercise)
+        st.warning("AI camera detection is available in the local desktop version only.")
 
     if st.session_state.get("run_detection", False):
         st.success("AI Detection Started")
