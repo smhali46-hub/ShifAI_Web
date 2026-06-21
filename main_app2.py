@@ -15,7 +15,7 @@ from modules.admin_page import show_admin
 from modules.profile_page import show_profile
 from modules.chat_page import show_chat
 from modules.goal_page import show_goals
-from modules.voice_assistant import show_voice_assistant
+#from modules.voice_assistant import show_voice_assistant
 from modules.nutrition_planner import show_nutrition_planner
 
 
@@ -44,9 +44,9 @@ username = get_current_user()
 role = get_user_role(username)
 
 if role == "admin":
-    menu_items = ["Home", "Workout", "Dashboard", "Nutrition", "Progress", "Goals", "Chat", "Voice", "Profile", "Admin"]
+    menu_items = ["Home", "Workout", "Dashboard", "Nutrition", "Progress", "Goals", "Chat", "Profile", "Admin"]
 else:
-    menu_items = ["Home", "Workout", "Dashboard", "Nutrition", "Progress", "Goals", "Chat", "Voice", "Profile"]
+    menu_items = ["Home", "Workout", "Dashboard", "Nutrition", "Progress", "Goals", "Chat", "Profile"]
 
 col1, col2 = st.columns([5, 1])
 
@@ -96,9 +96,6 @@ elif page == "Goals":
 
 elif page == "Chat":
     show_chat()
-
-elif page == "Voice":
-    show_voice_assistant()
 
 elif page == "Profile":
     show_profile()
