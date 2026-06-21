@@ -94,9 +94,9 @@ def show_workout():
                 f"Reps: {reps}, Calories: {calories}"
             )
 
-    with col2:
-        if st.button("🎯 Start AI Detection"):
-        st.warning("AI camera detection is available in the local desktop version only.")
+    #with col2:
+     #   if st.button("🎯 Start AI Detection"):
+     #   st.warning("AI camera detection is available in the local desktop version only.")
 
     if st.session_state.get("run_detection", False):
         st.success("AI Detection Started")
